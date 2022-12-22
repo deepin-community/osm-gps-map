@@ -1,0 +1,324 @@
+osm-gps-map (1.2.0-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release.
+  * Bump watch file version to 4.
+  * Update lintian overrides.
+  * Bump Standards-Version to 4.5.1, no changes.
+  * Don't sign tags by default.
+  * Refresh patches.
+  * Update symbols for 1.2.0.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Sun, 07 Feb 2021 20:28:06 +0100
+
+osm-gps-map (1.1.0-7) unstable; urgency=medium
+
+  * Team upload.
+  * Bump Standards-Version to 4.5.0, no changes.
+  * Drop Name field from upstream metadata.
+  * Bump debhelper compat to 10, changes:
+    - Drop --parallel option, enabled by default
+    - Don't explicitly enable autoreconf, enabled by default
+    - Drop dh-autoreconf build dependency
+  * Drop explicit build dependencies on libtool & automake.
+  * Reorder build dependencies.
+  * Don't use d-shlibmove.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Wed, 29 Apr 2020 12:47:06 +0200
+
+osm-gps-map (1.1.0-6) unstable; urgency=medium
+
+  * Team upload.
+  * Bump Standards-Version to 4.4.0, no changes.
+  * Add Build-Depends-Package field to symbols file.
+  * Update gbp.conf to use --source-only-changes by default.
+  * Drop obsolete python-all-dev build dependency.
+  * Add lintian overrides for doc-base-file-references-wrong-path.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Fri, 30 Aug 2019 11:17:41 +0200
+
+osm-gps-map (1.1.0-5) unstable; urgency=medium
+
+  * Team upload.
+  * Remove .pc from .gitignore.
+  * Bump Standards-Version to 4.2.0, no changes.
+  * Update watch file to use releases instead of tags.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Sat, 18 Aug 2018 16:56:01 +0200
+
+osm-gps-map (1.1.0-4) unstable; urgency=medium
+
+  * Team upload.
+  * Strip trailing whitespace from rules file.
+  * Bump Standards-Version to 4.1.5, no changes.
+  * Drop autopkgtest to test installability.
+  * Add lintian override for testsuite-autopkgtest-missing.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Wed, 01 Aug 2018 10:24:31 +0200
+
+osm-gps-map (1.1.0-3) unstable; urgency=medium
+
+  * Team upload.
+  * Update copyright-format URL to use HTTPS.
+  * Update Vcs-* URLs for Salsa.
+  * Bump Standards-Version to 4.1.4, no changes.
+  * Add d-shlibmove override for libfribidi0-dev -> libfribidi-dev.
+    (closes: #897468)
+  * Explicitly remove files not included in any package.
+  * Drop obsolete dbg package.
+  * Update Homepage URL to use HTTPS.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Thu, 03 May 2018 13:07:42 +0200
+
+osm-gps-map (1.1.0-2) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Bas Couwenberg ]
+  * Change priority from extra to optional.
+  * Bump Standards-Version to 4.1.1, changes: priority.
+  * Use pkg-info.mk variables instead of dpkg-parsechangelog output.
+  * Add autopkgtest to test installability.
+  * Strip trailing whitespace from control file.
+  * Enable all hardening buildflags.
+  * Make gir dependency from -dev package strictly versioned.
+  * Use Breaks/Replaces instead of Conflicts/Replaces with version.
+  * Use gir dh helper.
+  * Install girepository in MultiArch path.
+
+  [ Emilio Pozuelo Monfort ]
+  * Drop python-gobject-dev and python-gtk2-dev build-dependencies,
+    not needed since the switch to gobject-introspection bindings.
+    (closes: #879046)
+  * Let gir1.2-osmgpsmap-1.0 depend on gir:Depends.
+  * Move .gir file to libosmgpsmap-1.0-dev per the gobject-introspection
+    mini-policy.
+  * Don't suggest the dbg package from gir1.2-osmgpsmap-1.0.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Mon, 20 Nov 2017 14:15:43 +0100
+
+osm-gps-map (1.1.0-1) unstable; urgency=medium
+
+  [ Ross Gammon ]
+  * New upstream release (LP: #1507381)
+  * Refresh patch
+  * Update copyright file
+  * Drop lintian override as it is no longer required
+  * Rename -dev & -dbg packages
+  * Add Conflict and Replace for renamed packages
+  * Switch to dh_autoreconf
+  * Update debian/clean file
+  * Reinstate d-shlibmove & add option for unversioned -dev package
+  * Install built docs instead of source ones
+  * Enable parallel builds
+  * Drop README.source as quilt is now well known
+
+  [ Bas Couwenberg ]
+  * Update library & package name in symbols file for SONAME bump.
+  * Use symbol version without debian revision.
+  * Update symbols for version 1.1.0.
+  * Update Vcs-Browser URL to use HTTPS.
+
+ -- Ross Gammon <rossgammon@mail.dk>  Tue, 15 Dec 2015 23:11:56 +0100
+
+osm-gps-map (1.0.2-3) unstable; urgency=medium
+
+  * Start new Debian revision
+  * Fix watch file
+  * Bump standards version, no changes required
+  * Update Vcs URL to use cgit instead of gitweb
+  * Fix duplicate section in d/control
+  * Drop file from d/copyright that is no longer shipped
+  * Reveal hidden compile flags in buildlog
+  * Fix CFLAG append in d/rules so default hardening options are used
+  * Add upstream metadata
+  * Add lintian override for hardening-no-fortify warning
+
+ -- Ross Gammon <rossgammon@mail.dk>  Fri, 22 May 2015 22:36:03 +0200
+
+osm-gps-map (1.0.2-2) unstable; urgency=medium
+
+  [ Ross Gammon ]
+  * Install pkg-config file.
+    Thanks to Ruben Undheim (Closes: 753808)
+  * Fix lintian warning "Breaks-without-version"
+
+  [ Andreas Tille ]
+  * Do not Build-Depend hardening-wrapper which is deprecated
+
+ -- Ross Gammon <rossgammon@mail.dk>  Mon, 04 Aug 2014 19:53:27 +0200
+
+osm-gps-map (1.0.2-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Fix for tiles not showing (Closes: #745860, 745254)
+  * Add library as dependency for gir1.2-osmgpsmap-1.0 (Closes: #747584)
+
+ -- Ross Gammon <rossgammon@mail.dk>  Sat, 10 May 2014 19:28:25 +0200
+
+osm-gps-map (1.0.1-3) unstable; urgency=medium
+
+  * Revert versioned development packages since this breaks reverse
+    dependency subsurface
+    Closes: #737312
+
+ -- Andreas Tille <tille@debian.org>  Sat, 08 Feb 2014 21:00:20 +0100
+
+osm-gps-map (1.0.1-2) unstable; urgency=medium
+
+  * Apply patch from Ross Gammon <rossgammon@mail.dk>
+    Closes: #735841
+  * Added myself to Uploaders
+  * cme fix dpkg-control
+  * debian/copyright: Fix license statement of files in src/*
+    Closes: #732291
+  * Add Breaks+Conflicts libosmgpsmap-dev
+    Closes: #734898
+  * Checked new upstream version and noticed that it
+    Closes: #713635
+  * debian/*.doc-base: long description
+
+ -- Andreas Tille <tille@debian.org>  Sat, 25 Jan 2014 23:42:11 +0100
+
+osm-gps-map (1.0.1-1) experimental; urgency=medium
+
+  * New upstream version (Closes: #730733)
+  * Bump GTK build-dep to >= 3.0
+  * New package gir1.2-osmgpsmap-1.0, new SONAME osmgpsmap-1.0
+  * debian/patches:
+    - 01-fix_python_linking.patch dropped, no more needed
+    - 01-fix_LFS_support.patch added
+  * Simplified debian/rules :)
+  * Use canonical URLs for Vcs-* fields
+  * Mark the debug package Multi-Arch: same
+  * Standards-Version bump to 3.9.5, no changes needed
+  * Update debian/copyright
+
+ -- David Paleino <dapal@debian.org>  Sun, 15 Dec 2013 13:58:01 +0100
+
+osm-gps-map (0.7.3-3) unstable; urgency=low
+
+  * Add missing dependency on python-gtk2 (Closes: #680815)
+
+ -- David Paleino <dapal@debian.org>  Tue, 10 Jul 2012 09:01:42 +0200
+
+osm-gps-map (0.7.3-2) unstable; urgency=low
+
+  * Don't install *.la files anymore (Closes: #621487)
+  * Standards-Version bump to 3.9.3, no changes needed
+  * debhelper compatibility bump to 9 (multi-arch)
+  * Package switch from pysupport to dh_python2
+  * Remove *.a and *.la from python extension
+  * Updated debian/copyright
+  * Added more files to debian/clean
+  * Build with introspection disabled
+  * Dropped python-osmgpsmap-dbg: all debugging symbols are now
+    shipped in libosmgpsmap2-dbg.
+  * Enable package hardening
+
+ -- David Paleino <dapal@debian.org>  Wed, 27 Jun 2012 09:22:21 +0200
+
+osm-gps-map (0.7.3-1) unstable; urgency=low
+
+  * New upstream version
+  * Bump Standards-Version to 3.9.1, no changes needed
+  * Patches refreshed
+  * Enable generation of gtkdoc documentation
+  * Package moved under pkg-osm umbrella
+  * Add -UGDK_DISABLE_DEPRECATED to CFLAGS, merged from Ubuntu
+  * Move files to be cleaned inside debian/clean
+  * Symbols file updated
+
+ -- David Paleino <dapal@debian.org>  Wed, 30 Mar 2011 14:24:35 +0200
+
+osm-gps-map (0.7.2-1) unstable; urgency=low
+
+  * New upstream version
+  * debian/libosmgpsmap2.symbols updated, two new symbols added
+    (osm_gps_map_point_copy and osm_gps_map_point_free)
+  * debian/control:
+    - bump Standards-Version to 3.9.0, no changes needed
+
+ -- David Paleino <dapal@debian.org>  Thu, 22 Jul 2010 09:22:23 +0200
+
+osm-gps-map (0.7.1-1) unstable; urgency=low
+
+  * New upstream version
+  * debian/patches/:
+    - 00-fix_python-COPYING.patch removed, COPYING file is now
+      installed upstream
+    - 01-fix_python_linking.patch refreshed
+
+ -- David Paleino <dapal@debian.org>  Fri, 25 Jun 2010 07:27:41 +0200
+
+osm-gps-map (0.7.0-1) unstable; urgency=low
+
+  * New upstream version
+    - SONAME bump: libosmgpsmap0 → libosmgpsmap2
+  * debian/patches/:
+    - 00-fix_python-COPYING added, makes COPYING a real file
+      instead of a symlink.
+    - 01-fix_python_linking.patch added, fixes FTBFS because of
+      wrong linking of local library
+  * debian/control:
+    - added gnome-common build-dependency
+    - added gtk-doc-tools build-dependency
+    - bump python-gobject-dev build-dependency to >= 2.16.0
+  * debian/rules:
+    - don't delete version.xml.in on clean
+    - remove docs/reference/version.xml and gkt-doc.make on clean
+  * debian/libosmgpsmap-dev.examples, debian/python-osmgpsmap.examples
+    refreshed, added new example files
+  * debian/libosmgpsmap2.symbols refreshed with new symbols
+
+ -- David Paleino <dapal@debian.org>  Thu, 10 Jun 2010 22:17:37 +0200
+
+osm-gps-map (0.6.0-1) unstable; urgency=low
+
+  * New upstream version
+  * debian/copyright: upstream changed licensing to GPL-2 (only, not
+    "any later") -- file updated
+  * debian/libosmgpsmap0.examples moved to libosmgpsmap-dev.examples:
+    install examples in the -dev package, not with the shared library.
+  * debian/control:
+    - bump Standards-Version to 3.8.4, no changes needed
+    - libosmgpsmap0-dbg and python-osmgpsmap-dbg packages added
+  * debian/libosmgpsmap0.symbols: new symbols added
+
+ -- David Paleino <dapal@debian.org>  Wed, 10 Feb 2010 16:29:05 +0100
+
+osm-gps-map (0.5-1) unstable; urgency=low
+
+  * New upstream release
+    - fixed missing #include in src/osm-gps-map.c (Closes: #564907)
+  * debian/patches/:
+    - 02-fix_python_library_linking.patch removed, fixed upstream
+  * debian/python-osmgpsmap.examples updated
+  * debian/rules: don't remove COPYING on clean
+  * debian/libosmgpsmap0.symbols updated
+
+ -- David Paleino <dapal@debian.org>  Sat, 23 Jan 2010 18:01:56 +0100
+
+osm-gps-map (0.4-1) unstable; urgency=low
+
+  * New upstream release
+  * Fix debian/rules to build with multiple python versions
+  * debian/patches/01-fix_configure.ac_version.patch removed,
+    fixed upstream.
+  * debian/python-osmgpsmap.examples updated
+  * debian/libosmgpsmap0.symbols updated with new symbols from 0.4
+  * debian/control: added Build-Depends on python-all-dev
+
+ -- David Paleino <dapal@debian.org>  Fri, 08 Jan 2010 23:52:57 +0100
+
+osm-gps-map (0.3-2) unstable; urgency=low
+
+  * debian/control: added Vcs-* fields
+
+ -- David Paleino <dapal@debian.org>  Fri, 18 Dec 2009 23:54:34 +0100
+
+osm-gps-map (0.3-1) unstable; urgency=low
+
+  * Initial release (Closes: #516620)
+
+ -- David Paleino <dapal@debian.org>  Fri, 18 Dec 2009 23:24:45 +0100

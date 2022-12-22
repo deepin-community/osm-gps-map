@@ -1,0 +1,13 @@
+Document: libosmgpsmap-1.0-dev
+Title: OsmGpsMap Reference Manual
+Author: John Stowers
+Abstract: This manual describes the OsmGpsMap API.
+ libosmgpsmap is a library to embed maps in applications that when given GPS
+ co-ordinates, draws a GPS track, and points of interest on a moving map
+ display. Downloads map data from a number of websites, including
+ openstreetmap.org, openaerialmap.org and others.
+Section: Programming/C
+
+Format: HTML
+Index: /usr/share/gtk-doc/html/libosmgpsmap/index.html
+Files: /usr/share/gtk-doc/html/libosmgpsmap/*.html

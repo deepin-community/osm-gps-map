@@ -1,0 +1,3 @@
+# Cannot easily be fixed
+hardening-no-fortify-functions *
+

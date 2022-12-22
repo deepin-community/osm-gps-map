@@ -1,0 +1,109 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0
+Upstream-Source: https://github.com/nzjrs/osm-gps-map/
+
+Files: *
+Copyright: 2008, Marcus Bauer <marcus.bauer@gmail.com>
+           2009, John Stowers <john.stowers@gmail.com>
+           2009, Everaldo Canuto <everaldo.canuto@gmail.com>
+License: GPL-2
+
+Files: debian/*
+Copyright: 2009-2013, David Paleino <dapal@debian.org>
+           2015, Ross Gammon <rossgammon@mail.dk>
+License: GPL-2
+
+Files: examples/mapviewer.c
+Copyright: 2008, John Stowers <john.stowers@gmail.com>
+License: GPL-2
+
+Files: examples/mapviewer.py
+Copyright: 2008, Hadley Rich <hads@nice.net.nz>
+License: GPL-2
+
+Files: src/converter.c
+Copyright: 2008, Marcus Bauer <marcus.bauer@gmail.com>
+           2013, John Stowers <john.stowers@gmail.com>
+           2014, Martijn Goedhart <goedhart.martijn@gmail.com>
+License: GPL-2+
+
+Files: src/converter.h
+ src/osd-utils.h
+ src/private.h
+Copyright: 2008, Marcus Bauer  <marcus.bauer@gmail.com>
+           2013, John Stowers <john.stowers@gmail.com>
+License: GPL-2+
+
+Files: src/osd-utils.c
+ src/osm-gps-map-compat.c
+ src/osm-gps-map-compat.h
+ src/osm-gps-map-image.c
+ src/osm-gps-map-image.h
+ src/osm-gps-map-layer.c
+ src/osm-gps-map-osd.c
+ src/osm-gps-map-osd.h
+ src/osm-gps-map-point.c
+ src/osm-gps-map-point.h
+ src/osm-gps-map-source.c
+ src/osm-gps-map-source.h
+ src/osm-gps-map-track.c
+ src/osm-gps-map-track.h
+ src/osm-gps-map.h
+Copyright: 2013, John Stowers <john.stowers@gmail.com>
+License: GPL-2+
+
+Files: src/osm-gps-map-polygon.c
+ src/osm-gps-map-polygon.h
+Copyright: 2013, Samuel Cowen <samuel.cowen@camelsoftware.com>
+License: GPL-2+
+
+Files: src/osm-gps-map-layer.h
+Copyright: 2008, Marcus Bauer  <marcus.bauer@gmail.com>
+           2009, Till Harbaum  <till@harbaum.org>
+           2013, John Stowers <john.stowers@gmail.com>
+License: GPL-2+
+
+Files: src/osm-gps-map-widget.c
+Copyright: 2009, 2013, John Stowers <john.stowers@gmail.com>
+           2008, Marcus Bauer <marcus.bauer@gmail.com>
+           2009, Till Harbaum  <till@harbaum.org>
+License: GPL-2+
+
+Files: src/osm-gps-map-widget.h
+Copyright: 2008, Marcus Bauer <marcus.bauer@gmail.com>
+           2009, Till Harbaum <till@harbaum.org>
+           2013, John Stowers <john.stowers@gmail.com>
+License: GPL-2+
+
+License: GPL-2
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License version 2 as
+ published by the Free Software Foundation.
+ .
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License
+ along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ .
+ On Debian GNU systems, the complete text of the GNU General
+ Public License v2 can be found in `/usr/share/common-licenses/GPL-2'.
+
+License: GPL-2+
+ This program is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; either version 2 of the License, or
+ (at your option) any later version.
+ .
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License along
+ with this program; if not, write to the Free Software Foundation, Inc.,
+ 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+ .
+ On Debian GNU systems, the complete text of the GNU General
+ Public License v2 can be found in `/usr/share/common-licenses/GPL-2'.

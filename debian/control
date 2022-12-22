@@ -1,0 +1,72 @@
+Source: osm-gps-map
+Maintainer: Debian GIS Project <pkg-grass-devel@lists.alioth.debian.org>
+Uploaders: David Paleino <dapal@debian.org>,
+           Andreas Tille <tille@debian.org>,
+           Ross Gammon <rossgammon@mail.dk>
+Section: science
+Priority: optional
+Build-Depends: debhelper (>= 10~),
+               gnome-common,
+               gobject-introspection,
+               gtk-doc-tools,
+               libcairo2-dev,
+               libgirepository1.0-dev,
+               libglib2.0-dev,
+               libgtk-3-dev,
+               libsoup2.4-dev
+Standards-Version: 4.5.1
+Vcs-Browser: https://salsa.debian.org/debian-gis-team/osm-gps-map
+Vcs-Git: https://salsa.debian.org/debian-gis-team/osm-gps-map.git
+Homepage: https://nzjrs.github.com/osm-gps-map/
+
+Package: libosmgpsmap-1.0-dev
+Architecture: any
+Section: libdevel
+Depends: libosmgpsmap-1.0-1 (= ${binary:Version}),
+         gir1.2-osmgpsmap-1.0 (= ${binary:Version}),
+         libcairo2-dev,
+         libglib2.0-dev,
+         libgtk-3-dev,
+         libsoup2.4-dev,
+         ${misc:Depends}
+Breaks: gir1.2-osmgpsmap-1.0 (<< 1.1.0-2~)
+Conflicts: libosmgpsmap-1.0-0-dev
+Replaces: libosmgpsmap-1.0-0-dev,
+          gir1.2-osmgpsmap-1.0 (<< 1.1.0-2~)
+Description: GTK+ library to embed OpenStreetMap maps - development files
+ libosmgpsmap is a library to embed maps in applications that when given GPS
+ co-ordinates, draws a GPS track, and points of interest on a moving map
+ display. Downloads map data from a number of websites, including
+ openstreetmap.org, openaerialmap.org and others.
+ .
+ These are the development files for libosmgpsmap0, needed only if you're
+ writing or compiling an application which will use it.
+
+Package: libosmgpsmap-1.0-1
+Architecture: any
+Multi-Arch: same
+Section: libs
+Depends: ${shlibs:Depends},
+         ${misc:Depends}
+Pre-Depends: ${misc:Pre-Depends}
+Conflicts: libosmgpsmap-1.0-0
+Replaces: libosmgpsmap-1.0-0
+Description: GTK+ library to embed OpenStreetMap maps
+ libosmgpsmap is a library to embed maps in applications that when given GPS
+ co-ordinates, draws a GPS track, and points of interest on a moving map
+ display. Downloads map data from a number of websites, including
+ openstreetmap.org, openaerialmap.org and others.
+
+Package: gir1.2-osmgpsmap-1.0
+Architecture: any
+Section: introspection
+Depends: libosmgpsmap-1.0-1 (= ${binary:Version}),
+         ${gir:Depends},
+         ${misc:Depends}
+Description: GTK+ library to embed OpenStreetMap maps - Python bindings
+ libosmgpsmap is a library to embed maps in applications that when given GPS
+ co-ordinates, draws a GPS track, and points of interest on a moving map
+ display. Downloads map data from a number of websites, including
+ openstreetmap.org, openaerialmap.org and others.
+ .
+ This package provides the Python bindings for the library.

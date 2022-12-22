@@ -1,0 +1,6 @@
+# This is where gtk-doc-tools installs the documentation
+doc-base-file-references-wrong-path * /usr/share/gtk-doc/*
+
+# Not a problem
+package-contains-documentation-outside-usr-share-doc *
+

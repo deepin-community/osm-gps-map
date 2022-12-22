@@ -1,0 +1,6 @@
+debian/tmp/usr/share/gtk-doc/html/libosmgpsmap/*
+usr/include/*
+usr/lib/*/*.a
+usr/lib/*/*.so
+usr/lib/*/pkgconfig/*
+usr/share/gir-*/*
